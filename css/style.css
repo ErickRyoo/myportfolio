@@ -71,7 +71,7 @@ section{
 	height: 88vh;
 	width: 100%;
 	position: relative;
-	background: url(../img/backgroun2.png);
+	background: url(../img/background.png);
 	background-size: cover;
 	background-position: center;
 	display: flex;
