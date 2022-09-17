@@ -13,7 +13,7 @@
 	--text-color: black;
 	--main-color: #AD8B73;
 	--second-color: gray;
-	--other-color: #E3CAA5;
+	--other-color: black;
 	--box-color: #E3CAA5;
 	--colorful: #f86c4c;
 	--textareacolor: #FFFBE9;
@@ -24,6 +24,17 @@
 body{
 	background: var(--bg-color);
 	color: var(--text-color);
+}
+body.dark{
+	--bg-color: #0F0F0F;
+	--text-color: #E6E6E6;
+	--main-color: #AD8B73;
+	--second-color: gray;
+	--other-color: white;
+	--box-color: #E3CAA5;
+	--colorful: #f86c4c;
+	--textareacolor: #FFFBE9;
+	
 }
 header{
 	position: fixed;
@@ -38,10 +49,6 @@ header{
 	padding: 22px 16%;
 	border-bottom: 1px solid transparent;
 	transition: all .40s ease;
-}
-.logo img{
-	width: 135px;
-	height: auto;
 }
 .navbar{
 	display: flex;
@@ -66,9 +73,44 @@ header{
 	cursor: pointer;
 	display: none;
 }
-
 section{
 	padding: 160px 16% 90px;
+}
+.darkLight-searchBox{
+    display: flex;
+    align-items: center;
+}
+
+.darkLight-searchBox .dark-light{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.dark-light i545{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
 }
 .home{
 	height: 88vh;
@@ -361,7 +403,7 @@ form textarea{
 	padding: 10px;
 	border-radius: 0.5rem;
 }
-
+/*  hehe  */
 @media (max-width: 1325px){
 	header{
 		padding: 16px 3%;
@@ -408,7 +450,7 @@ form textarea{
 		left: 0;
 		display: flex;
 		flex-direction: column;
-		background: #12141c;
+		background: #3A3845;
 		text-align: left;
 		transition: all .40s ease;
 	}

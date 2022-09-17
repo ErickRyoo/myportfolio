@@ -13,7 +13,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
+	<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init("pkC_8CrArzMsNzDNE");
+		})();
+	</script>
 
 </head>
 <body>
@@ -30,15 +38,21 @@
 			<li><a href="#portfolio">My Portfolio</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
+	
+	<div class="darkLight-searchBox">
+		<div class="dark-light">
+			<i class='bx bx-moon moon'></i>
+			<i class='bx bx-sun sun'></i>
+	</div>
+
 	</header>
 
 	<!---home--->
 	<section class="home" id="home">
 		<div class="home-text">
-			<h4>Hello, my name is</h4>
 			<h1>Erick Reu<br> Suma<span>gue</span></h1>
 			<h3>and I'm a <span class="typing-2"></spa></h3>
-			<a href="#" class="btn">Hire Me</a>
+			<a href="#contact" class="btn">Let's talk</a>
 		</div>
 	</section>
 
@@ -53,7 +67,7 @@
 			<h4>I'm Erick and I'm a <span class="typing"></span></h4>
 			<p>I am a 20-year-old freelancer who works on projects such as websites, SEO, digital marketing, and video editing. I have helped numerous small and medium-sized businesses and organizations in growing and streamlining their processes, improving their online presence, and scaling their operations by utilizing software solutions best suited to the system for efficiencies.</p>
 			
-			<a href="#" class="btn">Contact Me</a>
+			<a href="#contact" class="btn">Contact Me</a>
 		</div>
 	</section>
 
@@ -118,9 +132,6 @@
 					<div class="row-text">
 						<h6>Development</h6>
 					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
-					</div>
 				</div>
 				<h3>A calculator app with a theme switcher</h3>
 			</div>
@@ -130,9 +141,6 @@
 				<div class="main-row">
 					<div class="row-text">
 						<h6>Development</h6>
-					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
 					</div>
 				</div>
 				<h3>An E-commerce Website Design  </h3>
@@ -144,9 +152,6 @@
 					<div class="row-text">
 						<h6>Development</h6>
 					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
-					</div>
 				</div>
 				<h3>A custom URL shortener like bitly</h3>
 			</div>
@@ -156,9 +161,6 @@
 				<div class="main-row">
 					<div class="row-text">
 						<h6>Development</h6>
-					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
 					</div>
 				</div>
 				<h3>A Website that generate random advice</h3>
@@ -170,9 +172,6 @@
 					<div class="row-text">
 						<h6>Development</h6>
 					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
-					</div>
 				</div>
 				<h3>Python Pomodoro Application</h3>
 			</div>
@@ -182,9 +181,6 @@
 				<div class="main-row">
 					<div class="row-text">
 						<h6>Development</h6>
-					</div>
-					<div class="row-icon">
-						<i class='bx bx-heart'></i>
 					</div>
 				</div>
 				<h3>Python Payroll Management System with Sql </h3>
@@ -216,11 +212,11 @@
 
 		<div class="contact-form">
 			<form action="">
-				<input type="" placeholder="Enter Your Name" required>
-				<input type="email" placeholder="Enter Your Email" required>
-				<input type="" placeholder="Enter Your Subject">
-				<textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
-				<input type="submit" value="Submit" class="send">
+				<input type="text" id="fullName" placeholder="Enter Your Name" required>
+				<input type="email" id="email_id" placeholder="Enter Your Email" required>
+				<input type="text" id="subject" placeholder="Enter Your Subject">
+				<textarea name="" id="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+				<input onclick="SendMail()" type="submit" value="Submit" class="send">
 			</form>
 		</div>
 	</section>
