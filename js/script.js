@@ -1,3 +1,9 @@
+const header = document.querySelector("header");
+
+window.addEventListener ("scroll", function() {
+	header.classList.toggle ("sticky", window.scrollY >0);
+});
+
 const body = document.querySelector("body"),
       modeToggle = document.querySelector(".dark-light");
 
