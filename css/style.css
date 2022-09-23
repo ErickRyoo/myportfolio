@@ -52,7 +52,6 @@ header{
 }
 .navbar{
 	display: flex;
-
 }
 .navbar a{
 	color: var(--second-color);
